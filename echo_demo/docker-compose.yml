@@ -1,0 +1,9 @@
+version: "3"
+services:
+  golang:
+    build: ./golang
+    ports: #端口绑定
+      - "8088:8088"
+    volumes: #本地目录映射
+      - $PWD/golang:/go/src/http_demo
+    tty: true     
